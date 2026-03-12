@@ -13,11 +13,23 @@ public class a3Villamor {
                 {"Padil", "Paul"},
                 {"Talotalo", "John"}
         };
-        int English[] = {86, 84, 85, 82, 87, 86, 80, 91, 75, 97};
-        int Filipino[] = {96, 96, 91, 92, 81, 88, 80, 85, 82, 86};
-        int Math[] = {79, 88, 85, 79, 90, 93, 94, 89, 94, 80};
-        int Science[] = {99, 81, 75, 92, 87, 98, 90, 92, 97, 81};
+        int English[] = new int[Students.length];
+        int Filipino[] = new int[Students.length];
+        int Math[] = new int[Students.length];
+        int Science[] = new int[Students.length];
         Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the grades of each student first:");
+        for (int i = 0; i < Students.length; i++) {
+            System.out.println("Student: " + Students[i][1] + " " + Students[i][0]);
+            System.out.print("English: ");
+            English[i] = scan.nextInt();
+            System.out.print("Filipino: ");
+            Filipino[i] = scan.nextInt();
+            System.out.print("Math: ");
+            Math[i] = scan.nextInt();
+            System.out.print("Science: ");
+            Science[i] = scan.nextInt();
+        }
         System.out.println("""
                 Students Grade Collection System
                 Options:
@@ -156,14 +168,3 @@ public class a3Villamor {
         }
     }
     }
-
-//English, Filipino, Math, Science
-//Alfonso, Jexkean : 86, 96, 79, 99
-//Arcega, Russel : 84, 96, 88, 81
-//Del Coro, Dwight : 85, 91, 85, 75
-//Dolotallas, Christian : 82, 79, 78, 92
-//Esteban, Enzo : 86, 88, 93, 98
-//Macabales, Seanjay : 80, 94, 77, 90
-//Pacana, Chester : 91, 85, 89, 92
-//Padil, Paul : 75, 82, 94, 97
-//Talotalo, John : 97, 86, 80, 81
